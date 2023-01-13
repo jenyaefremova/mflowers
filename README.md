@@ -6,6 +6,6 @@ grid, flexbox, jQuery, js, sass
 2. Запусть в консоли команду gulp run 
 3. Итоговый прект создастся в папке dist
 
-Ссылка на pages: 
+Ссылка на pages: https://jenyaefremova.github.io/mflowers/
 
 
