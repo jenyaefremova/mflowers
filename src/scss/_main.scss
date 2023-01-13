@@ -1,0 +1,49 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1460px;
+    margin: auto;
+}
+
+
+
+
+body,
+main {
+    background-color: $light;
+    color: $brown;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;   
+    font-size: 18px;
+    line-height: 21px;
+    text-rendering: optimizeSpeed;
+}
+
+body {
+    --nav-vertical-size: 100px;
+}
+
+a, .button {
+    text-decoration: none;
+    color: $brown;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+li {
+    list-style: none;
+    padding-left: 0;
+}
+

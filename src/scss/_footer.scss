@@ -1,0 +1,177 @@
+
+.footer {
+    background-color: $brown;
+    color: $light;
+
+    &__container {
+        padding: 80px 20px;
+        display: grid;
+        grid-template: "a b c";
+        justify-content: space-between;        
+    }
+    
+    &__link {
+        color: $light;
+    }
+    
+    &__heading {
+        font-family: 'Marmelad';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    &__copyright {
+        display: none;
+    }
+        
+}
+
+.offices {
+    grid-area: a;
+
+    &__text {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin-top: 24px;
+    }
+
+    &__moscow, &__rostov {
+        max-width: 275px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+    }
+}
+
+.social {
+    grid-area: b;
+   
+    &__text {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
+.contact-us {
+    grid-area: c;
+   
+    &__text {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+        margin-top: 24px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__phone {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    &__button {
+        max-width: 172px;
+        width: 100%;
+        color: $brown;
+        background: $yellow;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 15px 32px;
+        border-radius: 12px;
+        & .button__text {
+            margin-right: 10px;
+        }
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .footer {
+
+        &__container {
+            grid-template: 
+            "a c"
+            "b ."
+            "d .";
+            grid-template-columns: 1fr 247px;
+            padding: 32px 24px;
+        }
+
+        &__copyright {
+            grid-area: d;
+            display: block;
+            margin-top: 48px;
+            color: $light-gray;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+        }        
+    }
+
+    .offices {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        &__text {
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+
+    .social {
+        margin-top: 48px;
+    }
+
+    .contact-us	{
+        width: 100%;
+        max-width: 247px;
+
+        &__button {
+            max-width: 247px;
+        }        
+    }
+}
+
+@media (max-width: 525px) {
+    .footer {
+
+        &__container {
+            grid-template:  
+            "a a ."
+            "b b ." 
+            "c c ."
+            "d d .";
+            padding: 32px 20px;
+        }    
+    }
+
+    .offices {
+
+        &__text {
+            gap: 16px;
+        }
+    }
+
+    .contact-us {
+        margin-top: 48px;
+       
+        &__button {
+            max-width: 172px;
+        }
+    }
+}
